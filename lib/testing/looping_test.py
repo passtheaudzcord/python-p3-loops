@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from looping import happy_new_year, square_integers, fizzbuzz
+from looping import happy_new_year, square_integers, fizzbuzz_printer
 
 import io
 import sys
@@ -39,7 +39,7 @@ class TestFizzBuzz:
         '''prints 1 to 100 with fizz 3s, buzz 5s, fizzbuzz 3and5s'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
-        fizzbuzz()
+        fizzbuzz_printer()
         sys.stdout = sys.__stdout__
         answer = captured_out.getvalue()
         assert len(answer) != 0, "Nothing printed! Check your loop condition. Also do you have print statements?"
